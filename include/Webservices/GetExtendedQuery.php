@@ -389,7 +389,7 @@ function __FQNExtendedQueryIsFQNQuery($q) {
 
 function __FQNExtendedQueryIsRelatedQuery($q) {
 	$cq = __FQNExtendedQueryCleanQuery($q);
-	$cq = substr($cq,stripos(' where '));
+	$cq = substr($cq,stripos($cq,' where '));
 	return (stripos($cq,'related.')>0);
 }
 
